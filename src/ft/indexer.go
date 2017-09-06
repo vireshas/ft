@@ -7,14 +7,12 @@ import (
 	"strings"
 )
 
-// Contents of a single document to be indexed
 type IndexDoc struct {
-	Id         []byte // the id, this is usually the path to the document
-	IndexValue []byte // index this data
-	StoreValue []byte // store this data
+	Id         []byte
+	IndexValue []byte
+	StoreValue []byte
 }
 
-// Make word appropriate for indexing
 func IndexizeWord(w string) string {
 	return strings.TrimSpace(strings.ToLower(w))
 }
