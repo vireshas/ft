@@ -75,9 +75,7 @@ func (s *Searcher) Search(search string, maxn int) (SearchResults, error) {
 	}
 
 	sort.Sort(sort.Reverse(items))
-
-    fmt.Println("total matches", len(items))
-
+	fmt.Println("total matches", len(items))
 	if len(items) > maxn {
 		items = items[:maxn]
 	}
